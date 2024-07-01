@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", Route);
 Connection();
 
-const PORT = 8022;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
   console.log(`Server is running successfully on  PORT ${PORT}`)
 );
