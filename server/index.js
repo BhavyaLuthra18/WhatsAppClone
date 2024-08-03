@@ -5,7 +5,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3001", optionsSuccessStatus: 200 }));
+app.use(cors({ origin: "https://66adedd36e8dc35817410106--warm-jalebi-1a327d.netlify.app/", optionsSuccessStatus: 200 }));
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
