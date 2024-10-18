@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:8022/";
+const url = "https://whats-app-clone-topaz.vercel.app/";
 
 // Add User
 export const addUser = async (data) => {
