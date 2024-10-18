@@ -1,11 +1,9 @@
-
 import React, { createContext, useState, useRef, useEffect } from "react";
 import { io } from "socket.io-client";
 
 export const AccountContext = createContext(null);
 
 const AccountProvider = ({ children }) => {
-  
   const [account, setAccount] = useState();
   // users
   const [person, setPerson] = useState({});
@@ -17,7 +15,7 @@ const AccountProvider = ({ children }) => {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io("ws://localhost:9000");
+    socket.current = io("https://whats-app-clone-89x8.vercel.app/");
   }, []);
 
   return (
