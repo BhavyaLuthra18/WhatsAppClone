@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [""],
+    origin: ["whats-app-clone-fv7y.vercel.app"],
     optionsSuccessStatus: 200,
     methods: ["POST", "GET"],
     credentials: true,
