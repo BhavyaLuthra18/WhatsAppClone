@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const url = "https://whats-app-clone-topaz.vercel.app/";
+const url = "https://whats-app-clone-topaz.vercel.app";
 
 // Add User
 export const addUser = async (data) => {
   try {
-    const response = await axios.post(`${url}add`, data);
+    const response = await axios.post(`${url}/add`, data);
     console.log("Response from addUser API:", response.data);
   } catch (error) {
     console.log("Error while addUser API", error.message);
@@ -15,7 +15,7 @@ export const addUser = async (data) => {
 // Get users
 export const getUsers = async () => {
   try {
-    let response = await axios.get(`${url}users`);
+    let response = await axios.get(`${url}/users`);
     console.log("Response from getUsers API :", response.data);
     return response.data;
   } catch (error) {
