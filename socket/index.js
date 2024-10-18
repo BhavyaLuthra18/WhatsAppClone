@@ -3,6 +3,9 @@ import { Server } from "socket.io";
 const io = new Server(9000, {
   cors: {
     origin: "whats-app-clone-fv7y.vercel.app",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true,
   },
 });
 
