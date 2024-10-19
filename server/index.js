@@ -5,14 +5,14 @@ import cors from "cors";
 import bodyParser from "body-parser";
 const app = express();
 
-app.use(
-  cors({
-    origin: ["whats-app-clone-fv7y.vercel.app"],
-    optionsSuccessStatus: 200,
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "whats-app-clone-fv7y.vercel.app");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
