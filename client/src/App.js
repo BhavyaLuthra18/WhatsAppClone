@@ -7,7 +7,7 @@ import Messenger from "./components/Messenger.jsx";
 
 function App() {
   const clientId =
-    "320209266987-ec69ki9ctcpmt6svgklb3sq10opoc2ck.apps.googleusercontent.com";
+    "946174843077-jb2b6jjbroeg75c2cgs4o0uhvo0sd6u1.apps.googleusercontent.com";
   return (
     <GoogleOAuthProvider clientId={clientId}>
       <AccountProvider>

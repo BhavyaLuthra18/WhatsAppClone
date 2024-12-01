@@ -6,10 +6,7 @@ import bodyParser from "body-parser";
 const app = express();
 
 app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://whats-app-clone-fv7y.vercel.app"
-  );
+  res.header("Access-Control-Allow-Origin", "http://localhost:3004");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"

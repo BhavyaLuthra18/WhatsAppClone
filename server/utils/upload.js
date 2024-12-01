@@ -10,7 +10,8 @@ const PASSWORD = process.env.DB_PASSWORD;
 
 const storage = new GridFsStorage({
   // url where you want to upload the files
-  url: `mongodb+srv://${USERNAME}:${PASSWORD}@whatsapp-clone.yvacmlv.mongodb.net/whatsapp-clone?retryWrites=true&w=majority&appName=whatsapp-clone`,
+
+  url: ` mongodb+srv://${USERNAME}:${PASSWORD}@whatsapp-clone.yvacmlv.mongodb.net/?retryWrites=true&w=majority&appName=whatsapp-clone`,
   options: { useUnifiedTopology: true, useNewUrlParser: true },
   // what is coming from the behind for that we use request
   file: (request, file) => {

@@ -15,7 +15,7 @@ const AccountProvider = ({ children }) => {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io("https://whats-app-clone-89x8.vercel.app/");
+    socket.current = io("http://localhost:9000");
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://whats-app-clone-topaz.vercel.app";
+const url = "http://localhost:8022";
 
 // Add User
 export const addUser = async (data) => {
@@ -26,7 +26,7 @@ export const getUsers = async () => {
 //Set Conversation
 export const setConversation = async (data) => {
   try {
-    await axios.post(`${url}conversation/add`, data);
+    await axios.post(`${url}/conversation/add`, data);
     console.log(data);
   } catch (error) {
     console.log("Error while calling getConversation API", error.message);
@@ -35,7 +35,7 @@ export const setConversation = async (data) => {
 // Get Conversation
 export const getConversation = async (data) => {
   try {
-    let response = await axios.post(`${url}conversation/get`, data);
+    let response = await axios.post(`${url}/conversation/get`, data);
     return response.data;
   } catch (error) {
     console.log("Error while calling getConversation API", error.message);
@@ -45,7 +45,7 @@ export const getConversation = async (data) => {
 // New Message
 export const newMessage = async (data) => {
   try {
-    await axios.post(`${url}message/add`, data);
+    await axios.post(`${url}/message/add`, data);
   } catch (error) {
     console.log("Error while calling newMessage API", error.message);
   }
@@ -54,7 +54,7 @@ export const newMessage = async (data) => {
 // Get Messages
 export const getMessages = async (id) => {
   try {
-    let response = await axios.get(`${url}message/get/${id}`);
+    let response = await axios.get(`${url}/message/get/${id}`);
     console.log(response);
     return response.data;
   } catch (error) {
@@ -65,7 +65,7 @@ export const getMessages = async (id) => {
 // Upload File
 export const uploadFile = async (data) => {
   try {
-    let response = await axios.post(`${url}file/upload`, data);
+    let response = await axios.post(`${url}/file/upload`, data);
     return response.data;
   } catch (error) {
     console.log("Error while calling uploadFile API", error.message);
